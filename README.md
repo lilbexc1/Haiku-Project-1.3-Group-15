@@ -3,5 +3,5 @@ Then used the Webhook librarie to connect to a Discord Webhook server and publis
 Work outstanding is to automate the project2.py file into a linux OS using cronjob and schedule the time the Haikus will be posted (suggesting at least twice a day)
 
 ### Please Note!!!!!!!!! ###
-## IGNORE THE file: Project as it stopped working ##
+## IGNORE THE file: Project.py as it stopped working ##
 ### Only schedule file: project2.py which was tested and is a success ###
