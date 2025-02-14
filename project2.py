@@ -10,15 +10,16 @@ import random
 # This Code generates a Haiku from the news headlines and sends it to a Discord channel using a webhook.
 ### The API is NewsAPI.org and it is free to use. ###
 
-API_KEY = '1a1f87bf5bdd40cf94f092befe40804e'
+API_KEY = '1a1f87bf5bdd40cf94f092befe40804e' ### This key is provided by NewsAPI.org (obtained upon registering on the website)
 
 
-url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}'
+url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}' ### this is the link to which we will generate the Haikus from they're Headlines####
 
 
-DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1339505519643070526/GU0MOL-ueEZHYtBs1o7paf-BK-4L8O0HbkWMmCVR_zNNCanbU5QQYDPZIi2PyNlVzgJj'
+DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1339505519643070526/GU0MOL-ueEZHYtBs1o7paf-BK-4L8O0HbkWMmCVR_zNNCanbU5QQYDPZIi2PyNlVzgJj' ## Discord server link this current link is a test link ##
 
 
+### Fuction to create the Haiku using the headlines and make them syllabes 5-7-5 ###
 def create_haiku(headlines):
     haiku = []
     words = headlines.split()
