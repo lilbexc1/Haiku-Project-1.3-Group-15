@@ -18,7 +18,7 @@ API_KEY = '1a1f87bf5bdd40cf94f092befe40804e' ### This key is provided by NewsAPI
 url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}' ### this is the link to which we will generate the Haikus from they're Headlines####
 
 
-DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1339505519643070526/GU0MOL-ueEZHYtBs1o7paf-BK-4L8O0HbkWMmCVR_zNNCanbU5QQYDPZIi2PyNlVzgJj' ## Discord server link this current link is a test link ##
+DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1340337014276362280/ynaWxgojPXoZPRn2z6xkGAbjBo3S2pGDIGrZ9AUC7oUzb1GDp9ZbR8k6ZH0_LoTV0fhf' ## Discord server link this current link is a test link ##
 
 
 
@@ -55,7 +55,7 @@ if response.status_code == 200:
     data = response.json()
 
     
-    articles = data['articles'][:2]
+    articles = data['articles'][:1]
 
     
     for article in articles:
@@ -80,5 +80,5 @@ if response.status_code == 200:
         
         requests.post(DISCORD_WEBHOOK_URL, json=payload)
 
-print('GROUP 15')
+print('brought to you by Group 15')
 # %%
