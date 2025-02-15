@@ -7,7 +7,6 @@
 import requests
 import random
 import syllapy
-import json
 
 
 # This Code generates a Haiku from the news headlines and sends it to a Discord channel using a webhook.
@@ -20,6 +19,7 @@ url = f'https://newsapi.org/v2/top-headlines?country=us&apiKey={API_KEY}' ### th
 
 
 DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1339505519643070526/GU0MOL-ueEZHYtBs1o7paf-BK-4L8O0HbkWMmCVR_zNNCanbU5QQYDPZIi2PyNlVzgJj' ## Discord server link this current link is a test link ##
+
 
 
 def count_syllables(word):
@@ -55,8 +55,7 @@ if response.status_code == 200:
     data = response.json()
 
     
-    
-    short_articles = [article['title'] for article in articles if len(article['content']) < 100]
+    articles = data['articles'][:2]
 
     
     for article in articles:
